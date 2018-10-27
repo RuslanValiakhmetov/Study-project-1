@@ -19,22 +19,18 @@ class Serializer:
     def sum_areas(self, sum_areas):
         self._sum_areas = sum_areas
 
-    # Метод десериализации объекта - получает сериализованный, а возвращает десериализованный объект
     @staticmethod
     def deserialize(data):
         return pickle.loads(data)
 
-    # Метод сериализации объекта - возвращает сериализованный объект
     def serialize(self):
         return pickle.dumps(self)
 
     def print_objects(self):
-        # пример полиморфизма
         for figure in self._figures_list:
             print(figure)
         print("Areas sum: {}".format(self._sum_areas))
 
     def update_figures(self, side_length):
-        # пример полиморфизма
         for figure in self._figures_list:
             figure.side_length = side_length

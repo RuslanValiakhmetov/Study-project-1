@@ -25,12 +25,9 @@ class CalculatorTest(unittest.TestCase):
 
     def test_update_figures(self):
         calc = Calculator(5)
-        # Потому что не был вызван метод calc.calculate()
         self.assertEqual(calc.serializer.sum_areas, 0)
 
         calc.update_figures(2)
-        # Если общая сумма площадей не была рассчитана ранее ниразу, то она не вычисляется
-        # только обновляется размер стороны фигуры
         self.assertEqual(calc.serializer.sum_areas, 0)
 
         calc.calculate_sum_area()

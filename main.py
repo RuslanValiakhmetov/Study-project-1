@@ -17,7 +17,6 @@ def user_input_value():
 
 
 def main():
-    # Этот комментарий для IDE
     # noinspection PyBroadException
     try:
         calculator = Calculator(user_input_value())

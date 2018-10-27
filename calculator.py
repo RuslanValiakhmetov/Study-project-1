@@ -13,7 +13,6 @@ class Calculator:
 
     def calculate_sum_area(self):
         sum_areas = 0
-        # пример полиморфизма
         for figure in self._serializer.figures_list:
             figure.calc_area()
             sum_areas += figure.area
@@ -39,7 +38,6 @@ class Calculator:
             self.calculate_sum_area()
 
     @staticmethod
-    # Метод перевода числа из двоичного в десятичное представление
     def binary_to_integer(binary_value):
         """
         This function converts binary value as a string to decimal integer value
@@ -48,7 +46,6 @@ class Calculator:
         """
         integer_value = 0
         binary_index = 0
-        # Реверсивный обход строки
         for char in binary_value[::-1]:
             if char == '1':
                 integer_value += pow(2, binary_index)
